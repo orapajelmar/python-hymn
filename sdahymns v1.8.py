@@ -134,7 +134,6 @@ def helps():
 def about():
     tk.messagebox.showinfo("About", "Seventh Day Adventist Church Hymnal. \n\nDeveloper: Jelmar A. Orapa \nEmail: orapajelmar@gmail.com")
 
-
 def open_popup():
     # Calculate the center position of the screen
     screen_width = root.winfo_screenwidth()
@@ -193,19 +192,16 @@ def open_popup():
         top_title.width = prs.slide_width
         top_title.height = int(prs.slide_height / 10)  # Convert to integer
 
-
         # Calculate the position and dimensions of the text box
         text_box_left = 0
         text_box_top = top_title.top + top_title.height + (prs.slide_height / 30)  # Below the top title with additional spacing
         text_box_width = prs.slide_width
         text_box_height = prs.slide_height - text_box_top  # Adjust height to fit the remaining slide space
 
-
         text_box = slide.shapes.add_textbox(text_box_left, text_box_top, text_box_width, text_box_height)
         text_frame = text_box.text_frame
         p = text_frame.add_paragraph()
         p.text = text
-
 
         words = text.split()
         num_words = len(words)
@@ -259,7 +255,6 @@ def open_popup():
             os.startfile(save_path)
         except Exception as e:
             print(f"Error Displaying Texts: {e}")
-
 
 def open_popup_2():
     
@@ -320,19 +315,16 @@ def open_popup_2():
         top_title.width = prs.slide_width
         top_title.height = int(prs.slide_height / 10)  # Convert to integer
 
-
         # Calculate the position and dimensions of the text box
         text_box_left = 0
         text_box_top = top_title.top + top_title.height + (prs.slide_height / 30)  # Below the top title with additional spacing
         text_box_width = prs.slide_width
         text_box_height = prs.slide_height - text_box_top  # Adjust height to fit the remaining slide space
 
-
         text_box = slide.shapes.add_textbox(text_box_left, text_box_top, text_box_width, text_box_height)
         text_frame = text_box.text_frame
         p = text_frame.add_paragraph()
         p.text = text
-
 
         words = text.split()
         num_words = len(words)
@@ -386,9 +378,6 @@ def open_popup_2():
             os.startfile(save_path)
         except Exception as e:
             print(f"Error Displaying Texts: {e}")
-
-
-
                 
 def delete_temp_folder():
     try:
@@ -404,8 +393,6 @@ def delete_temp_folder():
 
     except Exception as e:
         tk.messagebox.showerror("Error", f"Failed to delete Temp folder: {str(e)}")
-
-
 
 # Create the main application window
 root = tk.Tk()

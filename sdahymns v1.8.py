@@ -467,12 +467,10 @@ result_listbox.bind("<Double-Button-1>", open_selected)
 result_listbox.bind("<Return>", open_selected)
 
 root.grid_rowconfigure(1, weight=1)
-root.grid_columnconfigure(0, weight=1)
-
+root.grid_columnconfigure(0, weight=1)
 root.bind("<Configure>", lambda event: update_background())
 root.bind("<Shift_R>", lambda event: toggle_focus())
 root.bind("<Up>", select_previous_result)
-root.bind("<Down>", select_next_result)
-
+root.bind("<Down>", select_next_result)
 search_files()
 root.mainloop()
